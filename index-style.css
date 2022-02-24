@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+}
+
+h1{
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    padding: 25px 25px 25px;
+    font-weight: bolder;
+}
+
+#header-div p{
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    padding: 0px 25px 25px;
+}
+
+/* add hover effect to each letter, change color with hover */
+h2{
+    font-family: 'Shizuru', cursive;
+    text-align: center;
+    font-size: 50px;
+}
+img {
+    height: 100px;
+    width:75px;
+    border-radius: 40%;
+    margin-left: 40%;
+
+}
+
+header {
+    background-color: black;
+    color:white;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    border: 5px dotted #c54e4e;
+    
+}
+
+#header-div {
+    height: 15%;
+}
+#image-and-name{
+    background: linear-gradient(black, #9198e5);
+}
+#top-nav {
+    background-color:rgb(255, 208, 0);
+}
+
+#top-nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.links{
+    font-family: 'Dosis', sans-serif;
+    color:black;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;  
+    color:black;
+}
+
+/* add hover effect to each letter, class bounce */
+/* #code-life {
+    padding:50px 0 0 25px;
+    color:rgb(255, 208, 0);
+    margin: 5px;
+    font-family: 'Dosis', sans-serif;
+}
+#function {
+    text-align: right;
+    padding:0 25px 50px 0;
+    color:rgb(255, 208, 0);
+    font-family: 'Dosis', sans-serif;
+} */
+
+
+
+.main-divs {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.main-divs p{
+    padding:10px;
+}
+#left-div {
+    height: 200px;
+    width: 100%;
+    background: rgb(226, 223, 217);
+}
+
+#right-div {
+    height: 200px;
+    width: 100%;
+    background-color: salmon;
+}
+
+
+#footer-nav ul {
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    background-color:black;
+    
+}
+
+.circle {
+    height:75px;
+    width:75px;
+    border-radius: 50%;
+    border: 5px dotted #c54e4e;
+    margin:25px;
+    font-size:15px;
+    background-color: rgb(255, 208, 0);
+    
+}
+
+.circle a {
+    font-weight: bolder;
+    font-family: 'Dosis', sans-serif;
+    color:black;
+}
+.rotate {
+    transition-duration: 0.8s;
+    transition-property: transform;
+
+  }
+/* change rotation specs */
+.rotate:hover {
+    transform: rotate(360deg);
+}
