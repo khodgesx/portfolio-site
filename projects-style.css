@@ -3,18 +3,11 @@
     border-radius: 10%;
 }
 
-h1{
-    font-family: 'Dosis', sans-serif;
-    font-size: 20px;
-    padding: 25px 25px 25px;
-    font-weight: bolder;
-    text-align: right;
-}
-
 #project-header p{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Shizuru', cursive;
     font-size: 20px;
     padding:25px;
+    text-align: center;
 }
 
 
@@ -58,44 +51,61 @@ a {
     font-family: 'Dosis', sans-serif;
 }
 
-#resume-div {
-    height: 200px;
-    width: 100%;
-    background: rgb(226, 223, 217);
-}
 
 #buffy-game {
     height: 200px;
     width: 100%;
     background-color: salmon;
+    font-size: 20px;
 }
 
 #giphy-collab {
     height: 200px;
     width: 100%;
     background-color: rgb(4, 9, 54);
+    font-size: 20px;
+    color: white;
 }
 #midge-carousel {
     height: 200px;
     width: 100%;
     background-color: salmon;
+    font-size: 20px;
 }
 
 #empty-project{
     height: 200px;
     width: 100%;
     background-color: rgb(4, 9, 54);
+    font-size: 20px;
+    color: white;
 }
 .p-buttons{
     border: none;
     border-radius: 10%;
+    font-family: 'Shizuru', cursive;
+    font-size:30px;
+    font-weight: 600;
+}
+
+.white-links {
+    color:white;
+}
+.color-links {
+    color:#5562d4
+}
+    
+
+
+h5{
+    font-family: 'Dosis', sans-serif;
+    text-align: right;
+    margin-right: 10px;
 }
 
 #footer-nav ul {
     display: flex;
     justify-content: space-between;
-    /* margin-left: 20px;
-    margin-right: 20px; */
     background-color:black;
     border-radius: 10%;
     
