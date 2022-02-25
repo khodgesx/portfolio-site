@@ -73,6 +73,9 @@ header {
     width: 100px;
     z-index: 2;
 }
+#circle-nav{
+    display: none;
+}
 
 #hamburger {
     height: 25px;
@@ -94,12 +97,12 @@ header {
     height:150px;
     width:300px;
     border-radius: 50px;
-    transform:translateY(100%);
+    transform:translateX(100%);
     z-index:10;
 }
 
 .menu-open {
-    transform: translateY(0%);
+    transform: translateX(0%);
     opacity:1;
 }
 
@@ -196,12 +199,12 @@ a {
 
 
 
-/* bigger than mobile screen */
 
 
 
 
-@media screen and (min-width:480px) {
+/* bigger than tablet screen */
+@media screen and (min-width:800px) {
     body{
         margin:30px;
         background-color: #d2d4e4;
@@ -242,21 +245,28 @@ a {
         z-index: 2;
     }
     #hamburger {
-        height: 35px;
-        width:40px;
-        padding:10px;
-        position: relative;
-        top:200px;
-        left:75px;
+        display: none;
     
     }
     #top-nav {
         background-color:rgb(255, 208, 0);
-        display: inline-block;
-        height: 500px;
+        height: 700px;
+        width:250px;
+        margin: 0 15px 0 15px;
+    }
+    #circle-nav{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: center;
+    }
+    #circle-nav button{
+        height: 200px;
         width:200px;
-        border-radius: 45%;
-        margin:10px;
+        border-radius: 50%;
+        border: 5px dotted #c54e4e;
+        margin:5px;
+        font-size:10px;
+        background-color: rgb(255, 208, 0);
     }
     main{
         display: grid;
@@ -284,61 +294,39 @@ a {
 
     }
     #left-div {
-        height: 500px;
-       
+        height: 700px;
         background: rgb(226, 223, 217);
     }
     
     #right-div {
-        height: 500px;
+        height: 700px;
         width: 100%;
         background-color: salmon;
     }
   
     
     .div-border{
-        border-radius: 10%;
         margin-bottom:0;
     }
-    .menu{
-        background-color: white;
-        opacity:0;
-        position:fixed;
-        padding:5px;
-        height:150px;
-        width:300px;
-        border-radius: 50px;
-        transform:translateX(100%);
-        z-index:10;
+
+    .menu {
+        display: none;
+     
     }
-    
-    .menu-open {
-        transform: translateX(0%);
-        opacity:1;
-    }
+
     
     a {
         text-decoration: none;  
         color:black;
     }
-    .menu ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-evenly;
-    }
+   
     .links{
         font-family: 'Dosis', sans-serif;
         color:black;
         padding: 25px;
         margin:0;
     }
-    #close{
-        text-align: center;
-        margin:0;
-        font-size: 30px;
-        color:white;
-        background-color: salmon;
-    }
+    
     #bottom-image-box {
         height:100%;
         margin-top:20px;
