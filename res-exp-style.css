@@ -5,7 +5,7 @@ body{
     background-color: #d2d4e4;
 }
 h1{
-    font-family: 'Shizuru', cursive;
+    font-family: 'Dosis', sans-serif;
     font-size: 20px;
     padding: 25px 25px 25px;
     font-weight: bolder;
@@ -28,9 +28,50 @@ header {
 
 #top-nav {
     background-color:rgb(255, 208, 0);
-    height:50px;
-    margin-bottom: 20px;
+    margin:5px 0 15px 0;
+    padding:10px;
+}
 
+
+.menu{
+    background-color: white;
+    opacity:0;
+    position:fixed;
+    padding:5px;
+    height:150px;
+    width:300px;
+    border-radius: 50px;
+    transform:translateX(100%);
+    z-index:10;
+}
+
+.menu-open {
+    transform: translateX(0%);
+    opacity:1;
+}
+
+a {
+    text-decoration: none;  
+    color:black;
+}
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+.links{
+    font-family: 'Dosis', sans-serif;
+    color:black;
+    padding: 25px;
+    margin:0;
+}
+#close{
+    text-align: center;
+    margin:0;
+    font-size: 30px;
+    color:white;
+    background-color: rgb(114, 207, 250);
+    border-radius: 50%;
 }
 
 #top-nav ul {
@@ -72,6 +113,8 @@ a {
 #experience-title{
     margin: 0;
     padding:5px;
+    text-align: center;
+    border: 3px dotted salmon;
 }
 #resume-link{
     color:#c54e4e;
@@ -82,6 +125,8 @@ a {
     height: 300px;
     width: 100%;
     background-color: salmon;
+    border: 1px dotted rgb(4, 9, 54);
+    
 }
 
 #ga-skills-div p{
@@ -103,6 +148,13 @@ a {
     width: 100%;
     background-color: rgb(4, 9, 54);
     color:white;
+}
+
+#stem-title {
+    text-align: center;
+    border: 3px dotted salmon;
+    padding: 5px;
+    margin: 0;
 }
 #neuro-div p{
     padding:10px;
