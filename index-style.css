@@ -47,15 +47,22 @@ header {
 }
 
 #button-photo{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
 
 }
+#hello{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 #kelly-oregon{
+    display: flex;
     border-radius: 50%;
     height: 80px;
     align-self: center;
     border:dotted 3px rgb(255, 208, 0);
+    position: absolute;
+    margin-left:200px;
 }
 .pill{
     width:300px;
@@ -216,9 +223,8 @@ a {
         height:250px;
     }
     #button-photo{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0px;
+        display: flex;
+        justify-content: space-around;
     
     }
     #kelly-oregon{
@@ -227,6 +233,8 @@ a {
         height: 200px;
         width:200px;
         border:dotted 3px rgb(255, 208, 0);
+        position: absolute;
+        margin-left: 300px;
     }
     .pill{
         width:700px;
@@ -250,7 +258,7 @@ a {
     }
     #top-nav {
         background-color:rgb(255, 208, 0);
-        height: 700px;
+        height: max;
         width:250px;
         margin: 0 15px 0 15px;
     }
@@ -261,7 +269,7 @@ a {
     }
     #circle-nav button{
         height: 200px;
-        width:200px;
+        width: 200px;
         border-radius: 50%;
         border: 5px dotted #c54e4e;
         margin:5px;
@@ -319,13 +327,7 @@ a {
         text-decoration: none;  
         color:black;
     }
-   
-    .links{
-        font-family: 'Dosis', sans-serif;
-        color:black;
-        padding: 25px;
-        margin:0;
-    }
+
     
     #bottom-image-box {
         height:100%;
