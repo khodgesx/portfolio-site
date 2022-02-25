@@ -60,21 +60,40 @@ a {
 }
 
 #resume-div {
-    height: 200px;
+    height: 250px;
     width: 100%;
     background: rgb(226, 223, 217);
 }
 
 #ga-skills-div {
-    height: 200px;
+    height: 250px;
     width: 100%;
     background-color: salmon;
 }
 
+#ga-skills-div p{
+    padding:10px;
+    margin:0;
+}
+#ga-skills-div ul{
+    padding:0 10px;
+    margin:0;
+    text-align: center;
+    list-style-type: none;
+}
+#ga-skills-div li {
+    font-size: 18px;
+}
+
 #neuro-div {
-    height: 200px;
+    height: 250px;
     width: 100%;
     background-color: rgb(4, 9, 54);
+    color:white;
+}
+#neuro-div p{
+    padding:10px;
+    margin:0;
 }
 
 
