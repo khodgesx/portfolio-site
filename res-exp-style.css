@@ -5,7 +5,7 @@ body{
     background-color: #d2d4e4;
 }
 h1{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Shizuru', cursive;
     font-size: 20px;
     padding: 25px 25px 25px;
     font-weight: bolder;
@@ -60,13 +60,26 @@ a {
 }
 
 #resume-div {
-    height: 250px;
+    height: 300px;
     width: 100%;
     background: rgb(226, 223, 217);
 }
+#resume-div ul {
+    margin: 0;
+    padding:5px;
+    list-style-type: none;
+}
+#experience-title{
+    margin: 0;
+    padding:5px;
+}
+#resume-link{
+    color:#c54e4e;
+    font-family: 'Shizuru', cursive;
+}
 
 #ga-skills-div {
-    height: 250px;
+    height: 300px;
     width: 100%;
     background-color: salmon;
 }
@@ -86,7 +99,7 @@ a {
 }
 
 #neuro-div {
-    height: 250px;
+    height: 300px;
     width: 100%;
     background-color: rgb(4, 9, 54);
     color:white;
