@@ -2,6 +2,8 @@
     padding: 0;
 }
 
+
+
 h1{
     font-family: 'Dosis', sans-serif;
     font-size: 20px;
@@ -21,13 +23,7 @@ h2{
     text-align: center;
     font-size: 50px;
 }
-img {
-    height: 100px;
-    width:75px;
-    border-radius: 40%;
-    margin-left: 40%;
 
-}
 
 header {
     background-color: black;
@@ -36,14 +32,19 @@ header {
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
     border: 5px dotted #c54e4e;
+    /* border-radius: 20%; */
     
 }
 
 #header-div {
     height: 15%;
+    width: 100%;
+    /* border-radius: 20%; */
 }
 #image-and-name{
-    background: linear-gradient(black, #9198e5);
+    background: linear-gradient(black, #b2b5d6);
+    /* border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%; */
 }
 #top-nav {
     background-color:rgb(255, 208, 0);
@@ -65,21 +66,18 @@ a {
     color:black;
 }
 
-/* add hover effect to each letter, class bounce */
-/* #code-life {
-    padding:50px 0 0 25px;
-    color:rgb(255, 208, 0);
-    margin: 5px;
-    font-family: 'Dosis', sans-serif;
+#aside-div {
+    display: none;
 }
-#function {
-    text-align: right;
-    padding:0 25px 50px 0;
-    color:rgb(255, 208, 0);
-    font-family: 'Dosis', sans-serif;
-} */
-
-
+#aside-nav {
+    display: none;
+}
+#menu-hamburger {
+    display: none;
+}
+#hamburger-div{
+    display: none;
+}
 
 .main-divs {
     display: grid;
@@ -102,8 +100,18 @@ a {
     width: 100%;
     background-color: salmon;
 }
-
-
+img {
+    height: 100px;
+    width:75px;
+    border-radius: 10%;
+    margin-left: 35%;
+    padding:5px;
+}
+#image{
+    background:linear-gradient(50deg, salmon, yellow);
+    margin:15px 3px 0 3px;
+    border:10px solid rgb(82, 56, 60);
+}
 #footer-nav ul {
     display: flex;
     justify-content: space-between;
@@ -137,4 +145,144 @@ a {
 /* change rotation specs */
 .rotate:hover {
     transform: rotate(360deg);
+}
+
+
+
+/* bigger than mobile screen */
+
+
+
+
+@media screen and (min-width:480px) {
+    body{
+        margin:30px;
+    }
+    header {
+        border-radius: 3%;
+    }
+    #image-and-name {
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+    }
+    #image {
+        height:100%;
+        margin-top:0px;
+        margin-bottom: 15%;
+    }
+    img {
+        height: 350px;
+        width:200px;
+        border-radius: 5%;
+        margin-left: 40%;
+    }
+    #top-nav {
+        display: none;
+    }
+    main {
+        margin-top:30px;
+        width: auto;
+        height: 45%;
+    }
+    
+    #hamburger-div{
+        display: block;
+        background-color: rgb(255, 208, 0);
+        width:30%;
+    }
+    #menu-hamburger {
+        display: block;
+        width: 85%;
+        margin-left:0;
+        padding:10px;
+    }
+    .div-border{
+        border-radius: 10%;
+        margin-bottom:0;
+    }
+    
+    .links{
+        font-family: 'Dosis', sans-serif;
+        color:black;
+        padding: 15px;
+    }
+    
+    a {
+        text-decoration: none;  
+        color:black;
+    }
+    .main-divs {
+        display: grid;
+        grid-template-columns: 1fr 10fr 10fr;
+        grid-gap: 10px;
+        font-family: 'Dosis', sans-serif;
+    }
+    
+    .main-divs p{
+        padding:10px;
+    }
+    #hamburger-div {
+        height:100%;
+        width:100px;
+    }
+    /* #aside{
+        height:100%;
+        width:100%;
+        background-color: rgb(255, 208, 0);
+    } */
+
+    .div-border p{
+        font-size: 30px;
+
+    }
+    #left-div {
+        height: 500px;
+        width: 100%;
+        background: rgb(226, 223, 217);
+    }
+    
+    #right-div {
+        height: 500px;
+        width: 100%;
+        background-color: salmon;
+    }
+    
+    footer {
+        background-color: none;
+    }
+    #footer-nav ul {
+        display: flex;
+        justify-content: space-between;
+        /* margin-left: 20px;
+        margin-right: 20px; */
+        background-color:white;
+        
+    }
+    
+    .circle {
+        height:200px;
+        width:200px;
+        border-radius: 50%;
+        border: 5px dotted #c54e4e;
+        margin:25px;
+        font-size:15px;
+        background-color: rgb(255, 208, 0);
+        
+    }
+    
+    .circle a {
+        font-weight: bolder;
+        font-family: 'Dosis', sans-serif;
+        color:black;
+    }
+    .rotate {
+        transition-duration: 0.8s;
+        transition-property: transform;
+    
+        }
+    /* change rotation specs */
+    .rotate:hover {
+        transform: rotate(360deg);
+    }
+    
 }
