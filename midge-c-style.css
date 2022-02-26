@@ -1,38 +1,42 @@
-/* ======= GENERAL ======== */
 body {
 	background: #dfcda7;
+    border: 10px solid #c0750c;
 }
+
 .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.container > img {
-	width: 50%;
-}
-.container > h1 {
+
+
+h1 {
 	font-family: 'Monoton', cursive;
-	font-weight: 800;
-	font-size: 2.5em;
-	margin-top: -1%;
+    text-align: center;
+	font-size: 30px;
 	color: #4c5aaa;
-	text-shadow: 1px 1px #c0750c;
+	text-shadow: 1px 2px #c0750c;
 	letter-spacing: 2px;
+    padding:10px;
 }
-/* ======= CAROUSEL SECTION ======== */
+
 .carousel-container {
-	width: 70%;
-	display: flex;
-	justify-content: space-around;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 10fr 1fr;
+    grid-gap: 25px;
+    margin: 100px;
+    align-items: center;
 }
 .carousel-images {
+    display: block;
 	width: 80%;
 	background: #d39333;
 	padding: 10px;
-	border-radius: 10px;
-	box-sizing: border-box;
-	/* box-shadow: 2px 2px #e99f38; */
-    border: 1px dotted #e99f38;;
+	border-radius: 5%;
+    border: 1px dotted #e99f38;
+    margin-left: auto;
+    margin-right: auto;
 }
 .carousel-images img {
 	width: 100%;
@@ -42,24 +46,85 @@ body {
 
 
 .carousel-button {
-	align-self: center;
+    font-family: 'Monoton', cursive;
 	background: #d39333;
 	padding: 10px;
 	color: rgb(201, 36, 36);
-	padding: 10px;
 	border-radius: 50%;
 	text-align: center;
-	box-shadow: 1px 1px #8deafa;
-}
-.carousel-button:hover {
-	cursor: pointer;
-	background: #fa8d8e;
-	box-shadow: 1px 1px #f2cd99;
-	color: white;
+	box-shadow: 1px 1px #83ddec;
+    text-shadow: 1px 2px #d39333;
 }
 
+#previous{
+    position: relative;
+    left:20%;
+}
+#next{
+    position: relative;
+    right:20%;
+   
+}
 .carousel-images img:first-of-type {
 	display: block;
 
+}
+#midge-facts{
+    width: 95%;
+    padding: 10px;
+    font-family: 'Monoton', cursive;
+    letter-spacing: 2px;
+    font-size: smaller;
+}
+#midge-facts h2{
+    color:#d39333;
+}
+#loves li{
+    color:red;
+}
+
+#hates li{
+    color:#4e818a;
+}
+
+@media screen and (min-width:480px) {
+    .carousel-button:hover {
+        cursor: pointer;
+        background: #044212;
+        color: white;
+    }
+    .carousel-button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .carousel-images {
+        display: block;
+        width: 65%;
+        background: #d39333;
+        padding: 10px;
+        border-radius: 5%;
+        border: 1px dotted #e99f38;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .carousel-images img {
+        width: 100%;
+        border-radius: 5%;
+        display: none;
+    }
+    #midge-facts{
+        margin-left: 10%;
+    }
+    h2{
+        font-size: 2.5em;
+    }
+    h3{
+        font-size: 2.5em;
+    }
+    li{
+        font-size: 1.5em;
+    }
 }
 
