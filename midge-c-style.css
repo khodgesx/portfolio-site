@@ -1,0 +1,65 @@
+/* ======= GENERAL ======== */
+body {
+	background: #dfcda7;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.container > img {
+	width: 50%;
+}
+.container > h1 {
+	font-family: 'Monoton', cursive;
+	font-weight: 800;
+	font-size: 2.5em;
+	margin-top: -1%;
+	color: #4c5aaa;
+	text-shadow: 1px 1px #c0750c;
+	letter-spacing: 2px;
+}
+/* ======= CAROUSEL SECTION ======== */
+.carousel-container {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+.carousel-images {
+	width: 80%;
+	background: #d39333;
+	padding: 10px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	/* box-shadow: 2px 2px #e99f38; */
+    border: 1px dotted #e99f38;;
+}
+.carousel-images img {
+	width: 100%;
+	border-radius: 10px;
+	display: none;
+}
+
+
+.carousel-button {
+	align-self: center;
+	background: #d39333;
+	padding: 10px;
+	color: rgb(201, 36, 36);
+	padding: 10px;
+	border-radius: 50%;
+	text-align: center;
+	box-shadow: 1px 1px #8deafa;
+}
+.carousel-button:hover {
+	cursor: pointer;
+	background: #fa8d8e;
+	box-shadow: 1px 1px #f2cd99;
+	color: white;
+}
+
+.carousel-images img:first-of-type {
+	display: block;
+
+}
+
