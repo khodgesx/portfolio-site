@@ -26,6 +26,7 @@ h2{
     font-family: 'Shizuru', cursive;
     text-align: center;
     font-size: 50px;
+    margin: 0;
 }
 
 
@@ -34,20 +35,18 @@ header {
     color:white;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 10px;
     border: 5px dotted white;
-    /* border-radius: 20%; */
-    
 }
 
 #header-div {
     height: 200px;
-    width: 95%;
+    width: 100%;
     /* border-radius: 20%; */
 }
 
 #button-photo{
     display: flex;
+    width: max;;
 
 }
 #hello{
@@ -55,15 +54,21 @@ header {
     align-items: center;
     justify-content: space-evenly;
 }
-#kelly-oregon{
+.kelly-oregon{
+    display: none;
+}
+
+.show-photo{
     display: flex;
     border-radius: 50%;
     height: 80px;
     align-self: center;
     border:dotted 3px rgb(255, 208, 0);
     position: absolute;
-    margin-left:200px;
+    top:7%;
+    right:25%;
 }
+
 .pill{
     width:300px;
     height: 100px;
@@ -204,9 +209,35 @@ a {
     transform: rotate(360deg);
 }
 
+/* //need to fix the divs -- <p> stuff creeping out  */
+@media screen and (min-width:480px) {
+    .pill{
+        width:100%;
+        height: 100px;
+        border-radius: 50px;
+        border: 5px dotted #c54e4e;
+        margin:25px;
+        font-size:15px;
+        background-color: rgb(255, 208, 0);
+        z-index: 2;
+        transition: width ease 0.3s;
+    }
+    .to-circle {
+        width: 100px;
+        z-index: 2;
+    }
 
-
-
+    #left-div {
+        height: max-content;
+        
+    }
+    
+    #right-div {
+        height: max;
+       
+    }
+  
+}
 
 
 
@@ -227,17 +258,24 @@ a {
         justify-content: space-around;
     
     }
-    #kelly-oregon{
+    .kelly-oregon{
+        display: none;
+    }
+    
+    .show-photo{
+        display: flex;
         border-radius: 50%;
         align-self: center;
         height: 200px;
         width:200px;
         border:dotted 3px rgb(255, 208, 0);
         position: absolute;
-        margin-left: 300px;
+        top:15%;
+        right: 20%;
     }
+    
     .pill{
-        width:700px;
+        width:100%;
         height: 250px;
         border-radius: 120px;
         border: 5px dotted #c54e4e;
@@ -266,6 +304,8 @@ a {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         justify-content: center;
+        grid-gap:25px;
+        height: 100%;
     }
     #circle-nav button{
         height: 200px;
@@ -304,12 +344,14 @@ a {
     #left-div {
         height: 700px;
         background: rgb(226, 223, 217);
+        height:max-content;
     }
     
     #right-div {
         height: 700px;
         width: 100%;
         background-color: salmon;
+        height:max-content;
     }
   
     

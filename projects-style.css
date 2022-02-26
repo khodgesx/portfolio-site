@@ -95,6 +95,9 @@ a {
     background-color: salmon;
     font-size: 20px;
 }
+#buffy-image{
+    display: none;
+}
 
 #giphy-collab {
     height: 200px;
@@ -103,12 +106,19 @@ a {
     font-size: 20px;
     color: white;
 }
+#gif{
+    display: none;;
+}
 #midge-carousel {
     height: 200px;
     width: 100%;
     background-color: salmon;
     font-size: 20px;
 }
+#midge-pic{
+    display: none;
+}
+
 
 #empty-project{
     height: 200px;
@@ -172,3 +182,157 @@ h5{
 .rotate:hover {
     transform: rotate(360deg);
 }
+
+
+
+
+
+
+/* bigger than tablet screen */
+@media screen and (min-width:800px) {
+    body{
+        margin:30px;
+        background-color: #d2d4e4;
+    }  
+    header {
+        border-radius: 3%;
+    }
+    #header-div {
+        height:250px;
+    }
+   
+    #hamburger {
+        display: none;
+    
+    }
+    #top-nav {
+        background-color:rgb(255, 208, 0);
+        height: max;
+        width: 95%;
+        margin: 10px 15px;
+        
+    }
+   
+    #circle-nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        grid-gap:25px;
+        height: 100%;
+        width: 100%;
+    }
+    #circle-nav button{
+        display:block;
+        height: 200px;
+        width:200px;
+        border-radius: 50%;
+        border: 5px dotted #c54e4e;
+        margin:5px;
+        font-size:10px;
+        background-color: rgb(255, 208, 0);
+    }
+
+    #circle-nav a{
+        display: block;
+    }
+  
+   #proj-divs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding:15px;
+        margin:0;
+        
+    }
+    #gif{
+        display: block;
+        height:25%;
+        width:25%;
+        align-items: center;
+    }
+    #midge-pic{
+        display: block;
+        height:50%;
+        width:25%;
+    }
+    #buffy-image{
+        display: block;
+        height:50%;
+        width:50%;
+    }
+    .typerwriter {
+        overflow: hidden;
+        margin:0 atuo;
+        border-right:.15em solid rgb(173, 177, 212);
+        letter-spacing: .15em;
+        animation: typing 3.5s (40, end), blink-caret .75s step-end infinite;
+    }
+    @keyframes typing{
+        from {width:0}
+        to {width:100%}
+    }
+    @keyframes blink-caret{
+        from, to {border-color: transparent}
+        50% {border-color: rgb(173, 177, 212)}
+    }
+    .menu {
+        display: none;
+    }
+
+    
+    a {
+        text-decoration: none;  
+        color:black;
+    }
+    
+    .links{
+        font-family: 'Dosis', sans-serif;
+        color:black;
+        padding: 15px;
+    }
+    
+    a {
+        text-decoration: none;  
+        color:black;
+    }
+   
+    #footer-nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin:25px;
+        background-color:white;
+        border: 3px dotted salmon;
+        
+    }
+    
+    .circle {
+        height:200px;
+        width:200px;
+        border-radius: 50%;
+        border: 5px dotted #c54e4e;
+        margin:25px;
+        font-size:15px;
+        background-color: rgb(255, 208, 0);
+        
+    }
+    
+    .circle a {
+        font-weight: bolder;
+        font-family: 'Dosis', sans-serif;
+        font-size: 30px;
+        color:black;
+    }
+    .rotate {
+        transition-duration: 0.8s;
+        transition-property: transform;
+    
+        }
+    /* change rotation specs */
+    .rotate:hover {
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+

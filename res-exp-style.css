@@ -35,6 +35,9 @@ header {
     display: none;
 }
 
+#circle-nav button{
+    display: none;
+}
 
 .menu{
     background-color: white;
@@ -220,6 +223,9 @@ a {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         justify-content: center;
+        align-items: center;
+        grid-gap:25px;
+        height: 100%;
     }
     #circle-nav button{
         display:block;
@@ -230,6 +236,13 @@ a {
         margin:5px;
         font-size:10px;
         background-color: rgb(255, 208, 0);
+        text-align: center;
+    }
+    .links{
+        font-family: 'Dosis', sans-serif;
+        color:black;
+        padding: 15px;
+        display: block;
     }
     #menu-button{
         height: 200px;

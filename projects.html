@@ -15,9 +15,14 @@
 </header>
 <nav id="top-nav">
     <img id="hamburger"src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/24/000000/external-hamburger-menu-list-with-parallel-navigation-button-basic-light-tal-revivo.png"/>
+    <ul id="circle-nav">
+        <button class="circle rotate nav"><a class="links" href="index.html">Home</a></button>
+        <button class="circle rotate nav"><a class="links" href="projects.html">Projects</a></button>
+        <button class="circle rotate nav"><a class="links" href="#footer-nav">Contact</a></button>
+    </ul>
 </nav>
 <aside class="menu">
-    <ul>           
+    <ul id="nav">           
         <a class="links"href="index.html">Home</a>
         <a class="links"href="resume-experience.html">Resume/Exp</a>
         <a class="links"href="#footer-nav">Contact</a>
@@ -29,20 +34,38 @@
 
 <body>
 <section id="proj-divs">
-    <button class="p-buttons"id="buffy-game">
-        <a class="color-links" href="https://github.com/khodgesx/choose-your-adventure-game" target="_blank">
-            Choose Your Own Adventure*</a>
-            <h5>*comes with a hint of Buffy</h5>
-    </button>
-    <button class="p-buttons"id="giphy-collab"> <a class="white-links"href="#" target="_blank">
-        Giphy Search</a>
-        <h5>collaborated with Steven Cueto & Aaron Hubbard</h5></button>
-    <button class="p-buttons"id="midge-carousel"> <a class="color-links"href="#" target="_blank">
-        Midge Carousel</a>
-        <h5>cuteness overload</h5></button>
-    <button class="p-buttons"id="empty-project"> <a class="white-links"href="#" target="_blank">
-        Coming soon!</a>
-        <h5>I am hard at work!</h5></button>
+
+    <div id="buffy">
+        <button class="p-buttons"id="buffy-game">
+            <a class="color-links" href="https://github.com/khodgesx/choose-your-adventure-game" target="_blank">
+                Choose Your Own Adventure*</a>
+                <img id="buffy-image"src="buffy-image.jpeg">
+                <h5>*comes with a hint of Buffy</h5>
+        </button>
+    </div>
+
+    <div id="giphy">
+        <button class="p-buttons"id="giphy-collab"> <a class="white-links"href="#" target="_blank">
+            <iframe id="gif"src="https://giphy.com/embed/VbnUQpnihPSIgIXuZv" width="384" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/computer-cat-wearing-glasses-VbnUQpnihPSIgIXuZv">via GIPHY</a></p>
+            Giphy Search</a>
+            <h5>collaborated with Steven Cueto & Aaron Hubbard</h5>
+        </button>
+    </div>
+
+    <div id="midge">
+        <button class="p-buttons"id="midge-carousel"> <a class="color-links"href="#" target="_blank">
+            Midge Carousel</a>
+            <img id="midge-pic"src="midge.JPG">
+            <h5>cuteness overload</h5>
+        </button>
+    </div>
+    
+    <div id="empty">
+        <button class="p-buttons"id="empty-project"> <a class="white-links"href="#" target="_blank">
+            Coming soon!</a>
+            <h5 class="typerwriter">I am hard at work!</h5>
+        </button>
+    </div>
 </section>  
 <footer>
     <nav id="footer-nav">
