@@ -13,3 +13,20 @@ $('#hamburger').on('click', ()=>{
 $('#menu-close').on('click', ()=>{
     $('.menu').removeClass('menu-open')
 })
+
+//resume/experience modal
+const $openButton = $('#open-resume');
+const $modal = $('#resume-modal');
+const $closeButton = $('#modal-close');
+
+const openModal = () => {
+    $modal.css('display', 'block');
+}
+
+const closeModal = () => {
+    $modal.css('display', 'none');
+}
+
+$openButton.on('click', openModal)
+$closeButton.on('click', closeModal)
+$('#modal-close-top').on('click',closeModal)

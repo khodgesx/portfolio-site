@@ -95,11 +95,64 @@ a {
 
 #info-divs {
     display: grid;
-    grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
     font-family: 'Dosis', sans-serif;
 }
+#resume-button {
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+#open-resume {
+    background-color: rgb(231, 162, 83);
+    padding:15px;
+    width: 90%;
+    border: 2px solid salmon;
+    font-family: 'Dosis', sans-serif
+}
+#resume-modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top:0;
+	left:0;
+	height:100%;
+	width: 100%;
+	z-index: 1;
+	display: none;
+	
+}
 
+#modal-textbox {
+	background-color: white;
+	height: 350px;
+	width: 90%;
+	padding: 2%;
+	line-height: 120%;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: scroll;
+}
+
+#modal-textbox p{
+    color:rgb(4, 4, 88);
+}
+#modal-close-top{
+    position: absolute;
+    right: 8%;
+    padding: 5px;
+    font-family: 'Monoton', cursive;
+    color: rgb(4, 4, 88);
+    background-color: rgb(231, 162, 83);
+}
+#modal-close{
+    padding:10px 25px;
+    font-family: 'Monoton', cursive;
+    margin-bottom: 10px;
+    color: rgb(4, 4, 88);
+    background-color: rgb(231, 162, 83);
+
+}
 #resume-div {
     height: 300px;
     width: 100%;
