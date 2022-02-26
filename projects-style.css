@@ -5,7 +5,7 @@ body{
     background-color: #d2d4e4;
 }
 #project-header p{
-    font-family: 'Shizuru', cursive;
+    font-family: 'Press Start 2P', cursive;
     font-size: 20px;
     padding:25px;
     text-align: center;
@@ -25,7 +25,12 @@ header {
     padding:10px;
 }
 
-
+#circle-nav{
+    display: none;
+}
+#circle-nav button{
+    display: none;
+}
 .menu{
     background-color: white;
     opacity:0;
@@ -107,7 +112,7 @@ a {
     color: white;
 }
 #gif{
-    display: none;;
+    display: none;
 }
 #midge-carousel {
     height: 200px;
@@ -128,8 +133,8 @@ a {
     color: white;
 }
 .p-buttons{
-    border: none;
-    border-radius: 10%;
+    border: 3px dashed darkslategrey;
+    border-radius: 2%;
     font-family: 'Shizuru', cursive;
     font-size:30px;
     font-weight: 600;
@@ -244,6 +249,9 @@ h5{
         margin:0;
         
     }
+    #proj-divs h5{
+        margin: 0;
+    }
     #gif{
         display: block;
         height:25%;
@@ -252,13 +260,47 @@ h5{
     }
     #midge-pic{
         display: block;
-        height:50%;
-        width:25%;
+        height: 75%;
+        width:30%;
+        position: relative;
+        left: 35%;
+        border-radius: 5%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    #midge-carousel:hover #midge-pic{
+        opacity: 1;
     }
     #buffy-image{
         display: block;
-        height:50%;
+        height: 75%;
         width:50%;
+        position: relative;
+        left: 25%;
+        border-radius: 5%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    #buffy-game:hover #buffy-image{
+        opacity:1;
+    }
+    
+    #giphy h5{
+        text-align: left;
+    }
+    #gif {
+        display: block;
+        height: 60%;
+        width:60%;
+        position: relative;
+        top:10%;
+        left: 25%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+
+    }
+    #giphy-collab:hover #gif{
+        opacity: 1;
     }
     .typerwriter {
         overflow: hidden;
