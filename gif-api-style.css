@@ -15,20 +15,23 @@ input[type=submit] {
   background-color: rgb(221, 185, 86);
   border-radius: 5px;
   padding: 5px;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Monoton', cursive;
   color:rgb(109, 109, 97);
   border-color: none;
 }
 input[type=text]{
-  background-color:rgb(216, 180, 164);
+  background-color:rgb(14, 104, 116);
   border-radius: 5px;
   padding: 5px;
+  color:white;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 2px;;
+  font-size: 15px;
 }
 label[for=search-term]{
 color:beige;
-font-family: 'Architects Daughter', cursive;
+font-family: 'Monoton', cursive;
 }
-
 #giphy-results {
   align-items: center;
   margin: 20px;

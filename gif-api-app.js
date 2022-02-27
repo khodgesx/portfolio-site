@@ -6,6 +6,8 @@ async function searchGifs(event){
     const response = await fetch(urlString);
     const results = await response.json();
 
+
+
     for (let i=0; i<results.data.length; i++){
         let images = results.data[i].images.fixed_width.url;
         $('#giphy-results').append(`<img src="${images}">`)
