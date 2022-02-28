@@ -111,6 +111,9 @@ a {
     font-size: 20px;
     color: white;
 }
+#giphy-collab a{
+    text-decoration: underline;
+}
 #gif{
     display: none;
 }
@@ -125,12 +128,15 @@ a {
 }
 
 
-#empty-project{
+#castle-project{
     height: 200px;
     width: 100%;
     background-color: rgb(4, 9, 54);
     font-size: 20px;
     color: white;
+}
+#castle-barracks{
+    display: none;
 }
 .p-buttons{
     border: 3px dashed darkslategrey;
@@ -254,8 +260,8 @@ h5{
     }
     #gif{
         display: block;
-        height:25%;
-        width:25%;
+        height:20%;
+        width:20%;
         align-items: center;
     }
     #midge-pic{
@@ -284,6 +290,7 @@ h5{
     #buffy-game:hover #buffy-image{
         opacity:1;
     }
+   
     
     #giphy h5{
         text-align: left;
@@ -302,7 +309,20 @@ h5{
     #giphy-collab:hover #gif{
         opacity: 1;
     }
-    .typerwriter {
+    #castle-barracks{
+        display: block;
+        height: 75%;
+        width:40%;
+        position: relative;
+        left: 35%;
+        border-radius: 5%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    #castle-project:hover #castle-barracks{
+        opacity: 1;
+    }
+    /* .typerwriter {
         overflow: hidden;
         margin:0 atuo;
         border-right:.15em solid rgb(173, 177, 212);
@@ -316,7 +336,7 @@ h5{
     @keyframes blink-caret{
         from, to {border-color: transparent}
         50% {border-color: rgb(173, 177, 212)}
-    }
+    } */
     .menu {
         display: none;
     }
