@@ -65,6 +65,7 @@ header {
     display: flex;
     border-radius: 50%;
     height: 80px;
+    width: 80px;
     align-self: center;
     border:dotted 3px rgb(255, 208, 0);
     position: absolute;
@@ -106,14 +107,15 @@ header {
 
 .menu{
     background-color: white;
+    border: 2px solid salmon;
     opacity:0;
     position:fixed;
     padding:5px;
     height:150px;
-    width:300px;
+    width:80%;
     border-radius: 50px;
     transform:translateX(100%);
-    z-index:10;
+    z-index:1;
 }
 
 .menu-open {
@@ -125,15 +127,15 @@ a {
     text-decoration: none;  
     color:black;
 }
-.menu ul {
+#nav {
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
+    padding:10px;
 }
 .links{
     font-family: 'Dosis', sans-serif;
     color:black;
-    padding: 25px;
     margin:0;
 }
 #close{
@@ -143,6 +145,8 @@ a {
     color:white;
     background-color: rgb(114, 207, 250);
     border-radius: 50%;
+    height:35%;
+    padding-top: 10px;
 }
 
 .main-divs {
@@ -157,13 +161,16 @@ a {
     margin: 0;
 }
 #left-div {
-    height: 200px;
+    height: 275px;
     width: 100%;
     background: rgb(226, 223, 217);
 }
+#ga{
+    text-decoration: underline;
+}
 
 #right-div {
-    height: 200px;
+    height: 275px;
     width: 100%;
     background-color: salmon;
 }
