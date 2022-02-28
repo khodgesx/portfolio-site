@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="castle-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <title>Castle Battle</title>
+
+</head>
+<header>
+    <h1 id="title">Castle Battle</h1>
+</header>
+<body>
+    
+    <div class="all-things-modal">
+        <button class="modal-buttons" id="openModal">About the Game</button>
+		    <div id="modal">
+			    <div id="modal-textbox">
+				
+                    <h1 id="how-to">How to play Castle Battle</h1>
+                    <p>Castle Battle is you versus the computer!</p>
+                    <p>You each have barracks that you will fill with peons that either attack your opponent or repair your barracks after attacks from your opponent. </p>
+                    <p>For each turn, you get a choice to either create a peon or to select a peon.</p>
+                    <p>If you choose to <b>create</b> a peon, you create it and give it a name and it assumes the position in your barracks but it will not have a job yet!</p>
+                    <p>If you choose to <b>select</b> a peon, you select it by name and give it a job type: attack or repair.</p>
+                    <p>For each repair-peon in your barracks, your barracks will increase hp by 1 point and for each attack-peon, it will attack your opponent and decrease their health by 1 point!</p>
+                    <p>After you've either created or selected a peon (you only get to do one!) the computer will take its turn...</p>
+                    <p>The computer will choose to either attack you or repair its barracks</p>
+                    <div id="modal-footer">
+					    <button class="modal-buttons" id="close" href="#">Close</button>
+				    </div>
+                </div>
+			</div>
+    </div>
+
+    <main>
+
+   
+    <section id="player section">
+        <h2>Ye Olde Player's Castle</h2>
+        <div class="barracks"id="player-barracks">
+            <ul class="player-peons-list">peons:
+            </ul>
+        </div>
+        <div id="player-status">
+            <p>Hit Points: <span id="player-hp"></span></p>
+            
+        </div>
+        <div id="peon-box">
+            <ul id="peons-no-job">Peons ready for work:
+
+            </ul>
+        </div>
+    </section>
+   
+
+    <section id="computer section">
+        <h2>Ye Olde Computer's Castle</h2>
+        <div class="barracks"id="computer-barracks">
+           
+        </div>
+        <div id="computer-status">
+            <p>Hit Points: <span id="computer-hp"></span></p>
+            
+        </div>
+    </section>
+
+    <div id="player-turn"><button id="create-or-select">Player Turn</button>
+        <div class="player-turn-buttons">
+            <button id="create-button"class="create peon" data-dismiss="modal">Create a Peon</button>
+            <button id="select-button">Select a Peon</button>
+        </div>
+    </div>
+   
+    <div id="create">
+        <div id="form-div">
+            <form id="create-form">
+                <label for="create-peon-form">Name your peon:</label>
+                <input type="text" id="peon-name"name="peon-name">
+                <input type="submit">
+            </form>
+            <!-- <div id="create-modal-footer">
+                <button class="create-close modal-buttons" id="create-close" href="#">Peon created!</button>
+            </div> -->
+        </div>
+    </div>
+    <div id="select">
+        <div id="select-form-div">
+            <form id="select-form">
+                <label for="select-peon-form">Type peon name:</label>
+                <input type="text" id="select-peon-name"name="select-peon-name">
+                <input type="submit">
+            </form>
+            <!-- <div id="select-modal-footer">
+                <button class="select-close modal-buttons" id="select-close" href="#">Peon Chosen!</button>
+            </div> -->
+        </div>
+    </div>
+    <div id="give-job">
+        <div id="give-job-buttons">
+            <button id="repair"class="select-close modal-buttons">Repair</button>
+            <button id="attack"class="select-close modal-buttons">Attack</button>
+            <!-- <div id="select-modal-footer">
+                <button class="select-close modal-buttons" id="select-close" href="#">Job given!</button>
+            </div> -->
+        </div>
+    </div>
+    
+
+</main>
+
+<footer>Created by: Kelly 'tryin to code' Hodges</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<script src="castle-app.js"></script>
+</html>

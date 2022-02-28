@@ -1,0 +1,233 @@
+body {
+    /* background-image: url("https://i.imgur.com/mnAgbx7.jpg?1"); */
+    background-color: aquamarine;
+    background-image: linear-gradient(rgb(172, 236, 231), rgb(199, 219, 161));   
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+#title {
+    color: salmon;
+    font-family: 'Shizuru', cursive;
+    font-size: 50px;
+    padding: 5px 25px 15px;
+    border: 3px dotted rgb(51, 67, 161);
+}
+footer{
+    color: salmon;
+    font-family: 'Shizuru', cursive;
+    font-size: 15px;
+    padding: 5px 25px 15px;
+    border: 3px dotted rgb(51, 67, 161);
+    text-align: center;
+    margin: 25px;
+}
+
+#how-to {
+    color: salmon;
+    font-family: 'Shizuru', cursive;
+
+}
+.modal-buttons {
+	padding: 14px 18px;
+	background-color: #677996;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
+}
+
+#openModal {
+    border: 10px;
+}
+
+/* this styling made it on top of everything else and kinda grayed out */
+#modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top:0;
+	left:0;
+	height:100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+	/* if overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+	display: none;
+	/* display none made it invisible. when we click to make it appear, we will see the styling above */
+	/* add display:block in our event handler on the about the game button */
+}
+
+
+#modal-textbox {
+	background-color: white;
+	height: 550px;
+	width: 550px;
+	padding: 2%;
+	line-height: 120%;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    color:rgb(161, 122, 51);
+}
+
+/* margins: set the margins fro the top and bottom to 150px 
+the right and left will auto set themselves and keep box centered horizontally */
+
+#modal-footer {
+	text-align: right;
+    top:0px;
+}
+.all-things-modal {
+    display:flex;
+    justify-content: center;
+    border: 10px;
+    
+
+}
+.barracks{
+    border: 5px solid rgb(51, 67, 161);
+    background-color: green;
+    height: 300px;
+    width: 300px;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* border: 10px; */
+    place-items: center;
+    height:900px;
+}
+
+h2 {
+    text-align: center;
+    color: #4d5b72;
+    font-family: 'Imperial Script', cursive;
+    font-size: 35px;
+    border: 3px dashed rgb(45, 210, 216);
+}
+
+#create-button, #select-button, #create-or-select{
+    padding: 14px 18px;
+	background-color: #677996;
+	/* border: none; */
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
+    border: 3px dashed rgb(45, 210, 216);
+    margin: 10px;
+    
+}
+#player-turn{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.player-turn-buttons {
+    border: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    display:none;
+}
+#form {
+    background-color: white;
+	height: 350px;
+	width: 550px;
+	padding: 2%;
+	line-height: 120%;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    color:rgb(161, 122, 51);
+} 
+
+#form-div{
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:65%;
+    height:50%;
+    z-index: 1;
+    overflow: auto;
+    display: none;
+}
+#give-job {
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:65%;
+    height:50%;
+    z-index: 1;
+    overflow: auto;
+    display: none;
+   
+}
+.player-peons-list {
+    font-family: 'Imperial Script', cursive;
+    font-size: 30px;
+    color:rgb(45, 210, 216);
+}
+
+input[type="submit"]{
+    padding: 14px 18px;
+	background-color: #677996;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
+    margin: 25px;
+}
+
+label[for="create-peon-form"]{
+    font-family: 'Shizuru', cursive;
+    color:salmon;
+    font-size: 40px;
+}
+
+#select-form-div {
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:65%;
+    height:80%;
+    z-index: 1;
+    overflow: auto;
+    display: none
+}
+
+#select-form {
+    background-color: white;
+	height: 100%;
+	width: 80%;
+	padding: 2%;
+	line-height: 120%;
+	border-radius: 2px;
+	margin: 50px auto;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    color:rgb(161, 122, 51);
+}
+#computer-status, #player-status{
+    padding: 14px;
+	background-color: #677996;
+	border: 2px dashed #57abb6;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
+    margin: 25px;
+}
+
