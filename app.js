@@ -14,6 +14,11 @@ $('#menu-close').on('click', ()=>{
     $('.menu').removeClass('menu-open')
 })
 
+//close aside menu if contact is clicked
+$('#contact-link').on('click', ()=>{
+    $('.menu').removeClass('menu-open')
+})
+
 //resume/experience modal
 const $openButton = $('#open-resume');
 const $modal = $('#resume-modal');
