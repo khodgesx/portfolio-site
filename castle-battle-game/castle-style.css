@@ -54,10 +54,7 @@ footer{
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
-	/* if overflow is clipped, a scroll-bar should be added to see the rest of the content*/
 	display: none;
-	/* display none made it invisible. when we click to make it appear, we will see the styling above */
-	/* add display:block in our event handler on the about the game button */
 }
 
 
@@ -96,7 +93,6 @@ the right and left will auto set themselves and keep box centered horizontally *
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* border: 10px; */
     place-items: center;
     height:900px;
 }
@@ -172,7 +168,7 @@ h2 {
    
 }
 .player-peons-list {
-    font-family: 'Imperial Script', cursive;
+    font-family: 'Dosis', sans-serif;
     font-size: 30px;
     color:rgb(45, 210, 216);
 }
@@ -231,3 +227,9 @@ label[for="create-peon-form"]{
     margin: 25px;
 }
 
+#peon-box{
+    color: rgb(247, 96, 80);
+    font-family: 'Shizuru', cursive;
+    font-size: 25px;
+
+}
