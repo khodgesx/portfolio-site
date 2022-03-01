@@ -174,7 +174,7 @@ a {
     width: 100%;
     background-color: salmon;
 }
-#pizzas{
+.accordion{
     display: grid;
     grid-template-rows: 1fr;
     justify-content: center;
@@ -266,6 +266,31 @@ a {
     #right-div {
         height: max;
        
+    }
+    #pizzas{
+        width: 100%;
+    }
+    .accordion{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        border: 2px solid orange;
+        padding:15px;
+        margin: 15px 0;
+        width: 100%;
+    }
+    .accordion-content{
+        border:1px solid green;
+        height:max-content;
+        width: 100%;
+        display:none;
+    }
+    #pizzas h1{
+        text-align: center;
+    }
+    #pizza-title{
+        font-family: Monoton, cursive;
+        letter-spacing: 2px;
     }
   
 }

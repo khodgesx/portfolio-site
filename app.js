@@ -38,19 +38,19 @@ $('#modal-close-top').on('click',closeModal)
 
 //homepage pizza "accordion"
 $("#pizza-one").on("click", ()=>{
-    $("#pizza-one-div").slideDown();
+    $("#pizza-one-div").slideToggle();
     $("#pizza-two-div").slideUp();
     $("#pizza-three-div").slideUp();
     
 });
 $("#pizza-two").on("click", ()=>{
-    $("#pizza-two-div").slideDown();
+    $("#pizza-two-div").slideToggle();
     $("#pizza-one-div").slideUp();
     $("#pizza-three-div").slideUp();
   
 });
 $("#pizza-three").on("click", ()=>{
-    $("#pizza-three-div").slideDown();
+    $("#pizza-three-div").slideToggle();
     $("#pizza-one-div").slideUp();
     $("#pizza-two-div").slideUp();
     
