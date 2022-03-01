@@ -15,7 +15,7 @@ $('#menu-close').on('click', ()=>{
 })
 
 //close aside menu if contact is clicked
-$('#contact-link').on('click', ()=>{
+$('.links').on('click', ()=>{
     $('.menu').removeClass('menu-open')
 })
 
