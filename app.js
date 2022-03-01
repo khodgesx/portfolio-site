@@ -36,7 +36,7 @@ $openButton.on('click', openModal)
 $closeButton.on('click', closeModal)
 $('#modal-close-top').on('click',closeModal)
 
-//homepage pizza "accordion"
+//homepage pizza "accordion" for mobile
 $("#pizza-one").on("click", ()=>{
     $("#pizza-one-div").slideToggle();
     $("#pizza-two-div").slideUp();
@@ -53,5 +53,25 @@ $("#pizza-three").on("click", ()=>{
     $("#pizza-three-div").slideToggle();
     $("#pizza-one-div").slideUp();
     $("#pizza-two-div").slideUp();
+    
+});
+
+//homepage pizza "accordion" for browser
+$("#b-pizza-one").on("click", ()=>{
+    $("#b-pizza-one-div").slideToggle();
+    $("#b-pizza-two-div").slideUp();
+    $("#b-pizza-three-div").slideUp();
+    
+});
+$("#b-pizza-two").on("click", ()=>{
+    $("#b-pizza-two-div").slideToggle();
+    $("#b-pizza-one-div").slideUp();
+    $("#b-pizza-three-div").slideUp();
+  
+});
+$("#b-pizza-three").on("click", ()=>{
+    $("#b-pizza-three-div").slideToggle();
+    $("#b-pizza-one-div").slideUp();
+    $("#b-pizza-two-div").slideUp();
     
 });

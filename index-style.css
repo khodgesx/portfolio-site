@@ -148,7 +148,6 @@ a {
     height:35%;
     padding-top: 10px;
 }
-
 .main-divs {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -173,6 +172,9 @@ a {
     height: max-content;
     width: 100%;
     background-color: salmon;
+}
+.accordion-browser{
+    display:none;
 }
 .accordion{
     display: grid;
@@ -367,6 +369,7 @@ a {
         height: 100%;
         width:250px;
         margin: 0 15px 0 15px;
+    
     }
     #circle-nav{
         display: grid;
@@ -374,12 +377,11 @@ a {
         justify-content: space-around;
         grid-gap:20px;
         height: 100%;
-        align-content: center;
         
     }
     #circle-nav button{
-        height: 200px;
-        width: 200px;
+        height: 175px;
+        width: 175px;
         border-radius: 50%;
         border: 5px dotted #c54e4e;
         margin:5px;
@@ -391,6 +393,9 @@ a {
         grid-template-columns: 1fr 6fr;
         padding:15px;
         width:95%;
+        justify-items: center;
+        border: 2px dotted black;
+        margin-right: 0;
         
     }
     .main-divs {
@@ -405,14 +410,14 @@ a {
  
 
     .div-border p{
-        font-size: 25px;
+        font-size: 22px;
         text-align: center;
         align-items: center;
         padding-top: 50px;
 
     }
     #left-div {
-        height: 700px;
+        height: 100%;
         background: rgb(226, 223, 217);
         height:100%;
         
@@ -441,6 +446,39 @@ a {
         color:black;
     }
 
+    #pizzas{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+    #pizza-title{
+        height:max-content;
+    }
+    .accordion{
+        display: none;
+    }
+    .accordion-browser{
+        display: grid;
+
+    }
+    .b-accordion-content{
+        display: none;
+    }
+
+    .b-accordion-content img{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        border: 3px solid green;
+    }
+    .b-accordion-content p{
+        font-family: 'Dosis', sans-serif;
+        font-size: 20px;
+        padding:50px;
+        text-align: center;
+    }
     
     #bottom-image-box {
         height:100%;
