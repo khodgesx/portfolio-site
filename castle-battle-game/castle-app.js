@@ -18,8 +18,6 @@ $closeButton.on('click', closeModal)
 /////////////////////////////////////////
 
 
-// const prompt = require('prompt-sync')();
-//Peon should have a name and job. Job is either repair or attack. 
 const playerBarracks = {
         peons: [],
         hitpoints: 10,
@@ -38,15 +36,29 @@ const displayStatus = () => {
 }
 displayStatus()
 
+
+//player turn click and choose C or S then player turn button hides until computer goes
+const createOrSelect =()=>{
+
+    $('#create-or-select').on('click', () => {
+        $('.player-turn-buttons').show();
+        $('#create-or-select').hide();
+    })
+    
+}
+createOrSelect();
+
+
+
 const $createPeon = () => {
         $('.player-turn-buttons').hide();
         //use modal css styling to pop up form when button clicked
         $('#form-div').css('display', 'block');
         $('#create-close').css('display', 'block');
         //when submit is hit on the form, run respondToPeonName function
-        $("#create-form").on("submit", $repsondToPeonName)
+        $("#create-form").on("submit", $repsondToPeonName);
         //added a second event lisener to close the form when you hit submit
-        $("#create-form").on("submit", $closeOnSubmit)         
+        $("#create-form").on("submit", $closeOnSubmit);       
 }
 $('#create-button').on('click', $createPeon)
 const $closeOnSubmit = () =>{
@@ -72,6 +84,7 @@ const $repsondToPeonName = (e) => {
     $('#peons-no-job').append($(`<li>${$peonName}</li>`));
     // Reset the input field to an empty string
     $("#peon-name").val("")
+    barracksLoop();  
 }
 
  ////////need to figure out why submit on the select button form refreshes the page
@@ -114,7 +127,7 @@ const $selectPeon = () => {
                 }   
                 
             }
-           
+            barracksLoop();  
             //this stops the page refresh after hitting submit following peon choosing
             //but it also keeps the old ul of peons to choose from .... 
             return false;
@@ -150,13 +163,13 @@ const barracksLoop = () =>{
             computerBarracks.hitpoints --;
         }
     }
+    computerTurn();
+    loseGameCheck();
+    $('#create-or-select').show();
    
 }
 
-function playerTurn(){
-    createOrSelect();
-    barracksLoop();
-}
+
 
 //choose random number of hit points from 1-5
 //computer then repairs itself for that number of hp or damages you for that number of hp
@@ -173,7 +186,7 @@ const computerTurn = ()=>{
     
 }
 
-function loseGameCheck(){
+const loseGameCheck = ()=>{
     if (computerBarracks.hitpoints < 0){
         console.log(`You destroyed your opponent's barracks!`)
         console.log("You win!");
@@ -185,20 +198,14 @@ function loseGameCheck(){
         console.log("It's a tie.");
     }else if(computerBarracks.hitpoints >= 0 && playerBarracks.hitpoints >= 0){
         console.log(`Your hitpoints are currently at ${playerBarracks.hitpoints}. Opponent is at ${computerBarracks.hitpoints}. Let's keep going!`)
-        gameRound();
+        // gameRound();
     }
 }
-function gameRound(){
-    playerTurn();
-    computerTurn();
-    loseGameCheck();
-}
 
 
 
-$('#create-or-select').on('click', () => {
-        $('.player-turn-buttons').show();
-})
+
+
 
 
 
