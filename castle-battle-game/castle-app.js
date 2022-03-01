@@ -1,21 +1,14 @@
-//modal:
-const $openButton = $('#openModal');
-const $modal = $('#modal');
-const $closeButton = $('#close');
-
-const openModal = () => {
-    $modal.css('display', 'block');
-}
-//or use .show()
-
-const closeModal = () => {
-    $modal.css('display', 'none');
-}
-
-$openButton.on('click', openModal)
-$closeButton.on('click', closeModal)
+//modal section:
+//open modal:
+$('#openModal').on('click', () => {
+    $('#modal').show();
+})
+//close modal with close button//
+$('#close').on('click', () => {
+    $('#modal').css('display', 'none');
+})
 ////////////////MODAL END////////////////
-/////////////////////////////////////////
+
 
 
 const playerBarracks = {
@@ -33,6 +26,13 @@ const computerBarracks = {
 const displayStatus = () => {
     $('#player-hp').text(`${playerBarracks.hitpoints}`);
     $('#computer-hp').text(`${computerBarracks.hitpoints}`);
+    for(i=0; i<peonsList.length; i++){
+        if(peonsList[i].job === null){
+            $('#peons-no-job').append($(`<li>${peonsList[i].name}</li>`));
+        }else if(peonsList[i].job != null){
+            $('#peons-no-job').remove();
+        }
+    }
 }
 displayStatus()
 
@@ -47,14 +47,15 @@ const createOrSelect =()=>{
     
 }
 createOrSelect();
+//createOrSelect is acting as start of the game right now 
 
 
 
 const $createPeon = () => {
+        //hide player turn button so you can't click again until computer gets its turn
         $('.player-turn-buttons').hide();
-        //use modal css styling to pop up form when button clicked
+        //use modal css styling to pop up create form when button clicked
         $('#form-div').css('display', 'block');
-        $('#create-close').css('display', 'block');
         //when submit is hit on the form, run respondToPeonName function
         $("#create-form").on("submit", $repsondToPeonName);
         //added a second event lisener to close the form when you hit submit
@@ -65,10 +66,6 @@ const $closeOnSubmit = () =>{
         $('#form-div').css('display', 'none');
 }
 
-
-// 1. Grab the element
-// const $form = $("#create-form")
-// 2. Define the function you want to happen
 const $repsondToPeonName = (e) => {
     // Keep the page from reloading
     e.preventDefault();
@@ -81,7 +78,7 @@ const $repsondToPeonName = (e) => {
         }
         peonsList.push(peonAdded)    
     //make an li element with this ^^ value
-    $('#peons-no-job').append($(`<li>${$peonName}</li>`));
+    // $('#peons-no-job').append($(`<li>${$peonName}</li>`));
     // Reset the input field to an empty string
     $("#peon-name").val("")
     barracksLoop();  
@@ -92,14 +89,14 @@ const $repsondToPeonName = (e) => {
 const $selectPeon = () => {
     $('.player-turn-buttons').hide();
     //show list of peons to choose from - those without a job
-    const $ul = $('<ul>Peons To Choose From</ul>');
-            $('#select-form').append($ul);
-    for(i=0; i<peonsList.length; i++){
-        if(peonsList[i].job === null){
-            let $li = $(`<li>${peonsList[i].name}</li>`)
-        $ul.append($li);
-        }
-    }
+    // const $ul = $('<ul>Peons To Choose From</ul>');
+    //         $('#select-form').append($ul);
+    // for(i=0; i<peonsList.length; i++){
+    //     if(peonsList[i].job === null){
+    //         let $li = $(`<li>${peonsList[i].name}</li>`)
+    //     $ul.append($li);
+    //     }
+    // }
     $("#select-form").val("") 
         //use modal css styling to pop up form when button clicked
         $('#select-form-div').css('display', 'block');
@@ -117,21 +114,24 @@ const $selectPeon = () => {
                     $('#repair').on('click', ()=>{
                         peonToGetJob.job = "repair"
                         $('#give-job').css('display', 'none')
+                        //update peons gives them the job in the array above and types it out on screen
                         updatePeons();
                     })
                     $('#attack').on('click', ()=>{
                         peonToGetJob.job = "attack"
                         $('#give-job').css('display', 'none')
                         updatePeons();
+                          
                     })
                 }   
                 
             }
-            barracksLoop();  
+           
             //this stops the page refresh after hitting submit following peon choosing
             //but it also keeps the old ul of peons to choose from .... 
             return false;
         })
+       
 }
 $('#select-button').on('click', $selectPeon)
 
@@ -140,9 +140,11 @@ const updatePeons = () => {
     for(i=0; i<peonsList.length; i++){
         if(peonsList[i].job === "repair"){
         $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to repair the barracks`)
+        barracksLoop();
         }else{
             if(peonsList[i].job === "attack")
             $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to attack the enemy`)
+            barracksLoop();
         }
     }
 }
