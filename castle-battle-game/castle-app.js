@@ -164,6 +164,7 @@ const barracksLoop = () =>{
         }
     }
     computerTurn();
+    displayStatus()
     loseGameCheck();
     $('#create-or-select').show();
    
@@ -175,7 +176,6 @@ const barracksLoop = () =>{
 //computer then repairs itself for that number of hp or damages you for that number of hp
 const computerTurn = ()=>{
     let turn = Math.random()*1;
-    //console.log(turn);
     if (turn > 0.5){
         computerBarracks.hitpoints += computerBarracks.randomTurn;
         console.log(`Your opponent repaired their barracks by ${computerBarracks.randomTurn}.\n`)
@@ -198,7 +198,7 @@ const loseGameCheck = ()=>{
         console.log("It's a tie.");
     }else if(computerBarracks.hitpoints >= 0 && playerBarracks.hitpoints >= 0){
         console.log(`Your hitpoints are currently at ${playerBarracks.hitpoints}. Opponent is at ${computerBarracks.hitpoints}. Let's keep going!`)
-        // gameRound();
+
     }
 }
 
