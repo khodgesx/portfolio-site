@@ -37,7 +37,7 @@ header {
     position:fixed;
     padding:5px;
     height:150px;
-    width:80%;
+    width:90%;
     border-radius: 50px;
     transform:translateX(100%);
     z-index:1;
@@ -56,7 +56,7 @@ a {
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
-    padding:10px;
+    padding:10px 0;
     margin:0;
 }
 .links{
@@ -66,14 +66,17 @@ a {
 }
 #close{
     text-align: center;
-    margin:0;
+    margin: 0;
     font-size: 30px;
-    color:white;
+    color: white;
     background-color: rgb(114, 207, 250);
     border-radius: 50%;
+    height: 35%;
+    padding-top: 10px;
 }
 #menu-close{
     display: block;
+    padding:0;
 }
 
 #top-nav ul {
@@ -246,14 +249,14 @@ h5{
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
         align-items: center;
-        grid-gap:25px;
-        height: 100%;
+        grid-gap:10px;
+        height: max-content;
         width: 100%;
     }
     #circle-nav button{
         display:block;
-        height: 200px;
-        width:200px;
+        height: 175px;
+        width:175px;
         border-radius: 50%;
         border: 5px dotted #c54e4e;
         margin:5px;

@@ -371,7 +371,7 @@ a {
     }
     #top-nav {
         background-color:rgb(255, 208, 0);
-        height: 100%;
+        height:max-content;
         width:250px;
         margin: 0 15px 0 15px;
     
