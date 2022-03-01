@@ -34,22 +34,18 @@ h2:hover{
 
 
 header {
-    background-color: black;
+    background: linear-gradient(135deg, rgb(202, 98, 66), rgb(179, 154, 15));
     color:white;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
     border: 5px dotted white;
+    height: max-content;
+    width: auto;
+    
 }
 
-#header-div {
-    height: 200px;
-    width: 100%;
-    /* border-radius: 20%; */
-}
 
 #button-photo{
     display: flex;
-    width: max;;
+    width: max;
 
 }
 #hello{
@@ -255,6 +251,13 @@ a {
 
 /* //need to fix the divs -- <p> stuff creeping out  */
 @media screen and (min-width:480px) {
+    header {
+        border-radius: 3%;
+        height: auto;
+        width: auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
     .pill{
         width:100%;
         height: 100px;
@@ -319,6 +322,8 @@ a {
     }  
     header {
         border-radius: 3%;
+        height: auto;
+        width: auto;
     }
     #header-div {
         height:250px;
@@ -395,7 +400,7 @@ a {
         width:95%;
         justify-items: center;
         border: 2px dotted black;
-        margin-right: 0;
+        margin:10px;
         
     }
     .main-divs {
