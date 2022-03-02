@@ -153,10 +153,12 @@ a {
 }
 
 #kelly {
+    display: block;
     height: 100px;
     width:75px;
     border-radius: 10%;
-    margin-left: 35%;
+    margin-left: auto;
+    margin-right:auto;
     padding:5px;
 }
 #bottom-image-box{
@@ -165,9 +167,9 @@ a {
 #bottom-image-box p{
     color:rgb(9, 54, 12);
     font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
     line-height: 1.5;
-    padding:5px;
-    
+    padding:5px 20px; 
 }
 #footer-nav ul {
     display: flex;
@@ -225,7 +227,7 @@ a {
     .to-circle {
         width: 100px;
         z-index: 2;
-    }   
+    }      
 }
 
 
@@ -337,7 +339,9 @@ a {
         border-radius: 5%;
         margin-left: 40%;
     }
-    
+    #bottom-image-box p{
+        font-size: 15px;
+    } 
   
     
     .links{

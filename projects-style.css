@@ -173,12 +173,19 @@ a {
     color:#1324c4;
 }
     
-
-
 h5{
     font-family: 'Dosis', sans-serif;
     text-align: right;
     margin-right: 10px;
+}
+
+#git-activity img{
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    height: auto;
+    width: 95%;
+    margin-top:15px;
 }
 
 #footer-nav ul {
