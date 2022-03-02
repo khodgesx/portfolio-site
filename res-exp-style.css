@@ -210,7 +210,7 @@ a {
 }
 
 #neuro-div {
-    height: 300px;
+    height: max-content;
     width: 100%;
     background-color: rgb(4, 9, 54);
     color:white;
