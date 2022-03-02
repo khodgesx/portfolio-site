@@ -83,12 +83,11 @@ const $repsondToPeonName = (e) => {
         }
         peonsList.push(peonAdded)    
     //make an li element with this ^^ value
-    $('#peons-no-job').append($(`<li>${$peonName}</li>`));
-    // Reset the input field to an empty string
+    // $('#peons-no-job').append($(`<li>${$peonName}</li>`));
+    // // Reset the input field to an empty string
     $("#peon-name").val("") 
-    
-    computerTurn();
-    barracksLoop();
+    updatePeons();
+    // computerTurn();
 }
 
  ////////need to figure out why submit on the select button form refreshes the page
@@ -137,20 +136,31 @@ const $selectPeon = () => {
 $('#select-button').on('click', $selectPeon)
 
 
-const updatePeons = () => {
-    for(i=0; i<peonsList.length; i++){
-        if(peonsList[i].job === "repair"){
-        $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to REPAIR the barracks`)
-        }else{
-            if(peonsList[i].job === "attack")
-            $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to ATTACK the enemy`)
+// const updatePeons = () => {
+//     for(i=0; i<peonsList.length; i++){
+//         if(peonsList[i].job === "repair"){
+//         $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to REPAIR the barracks`)
+//         }else{
+//         if(peonsList[i].job === "attack")
+//             $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to ATTACK the enemy`)
            
+//         }
+//     }computerTurn();
+   
+// }
+const updatePeons = () =>{
+    //remove and refresh the list with info below
+    $('.player-peons-list').empty();
+    for (i=0; i<peonsList.length; i++){
+        if(peonsList[i].job === "repair"){
+            $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to REPAIR the barracks`)
+        }else if(peonsList[i].job === "attack"){
+            $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to ATTACK the enemy`)
+        }else{
+            $('.player-peons-list').append(`<li>${peonsList[i].name} is ready for work`)
         }
     }computerTurn();
-    barracksLoop();
-   
 }
-
 
 
 //then loop through the peons in barracks
@@ -185,6 +195,7 @@ const computerTurn = ()=>{
         playerBarracks.hitpoints -= computerBarracks.randomTurn;
         alert(`Your opponent attacked you causing ${computerBarracks.randomTurn} damage!\n`)
     }
+    barracksLoop();
     loseGameCheck();
     
 }
