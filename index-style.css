@@ -13,7 +13,7 @@ h1{
     font-weight: bolder;
 }
 
-#header-div p{
+#header-p{
     font-family: 'Dosis', sans-serif;
     font-size: 20px;
     padding: 25px;
@@ -88,6 +88,28 @@ header {
 }
 #circle-nav{
     display: none;
+}
+
+#get-quote{
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding: 5px 20px;
+    border:15px;
+    box-shadow: 5px 5px rgb(5, 5, 63), 10px 10px rgb(17, 139, 78);
+}
+#get-quote:hover{
+    background-color:salmon;
+}
+#quote{
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+    padding:15px;
+    border: 25px;
+    text-align: center;
+    margin: auto;
+    font-size: 10px;
 }
 
 #hamburger {
@@ -208,10 +230,9 @@ a {
 @media screen and (min-width:480px) {
     header {
         border-radius: 3%;
-        height: auto;
+        height: max-content;
         width: auto;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
+
     }
     .pill{
         width:95%;
@@ -228,6 +249,9 @@ a {
         width: 100px;
         z-index: 2;
     }      
+    #quote{
+        font-size: 20px;
+    }
 }
 
 
@@ -244,7 +268,7 @@ a {
         width: auto;
     }
     #header-div {
-        height:250px;
+        height:max-content;
     }
     #button-photo{
         display: flex;
@@ -282,6 +306,13 @@ a {
      .to-circle {
         width: 250px;
         z-index: 2;
+    }
+    #get-quote{
+        padding: 15px 50px;
+        font-size: 15px;
+    }
+    #get-quote p{
+        width: 100%;
     }
     #hamburger {
         display: none;

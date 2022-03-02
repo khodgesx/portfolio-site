@@ -5,6 +5,19 @@ $("#hello").on("click", function(){
     $('.kelly-oregon').toggleClass("show-photo")
 });
 
+//quote button for quote api
+async function quotes(){
+
+    const urlString = 'https://api.github.com/zen';
+    const response = await fetch(urlString);
+    const results = await response.text();
+
+    $('#quote').html(results)
+    
+}
+$('#get-quote').on('click', quotes);
+
+
 //click on #hamburger image and add class menu open to menu
 $('#hamburger').on('click', ()=>{
     $('.menu').addClass('menu-open')
