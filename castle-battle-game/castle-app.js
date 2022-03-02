@@ -64,9 +64,6 @@ const $createPeon = () => {
         $("#create-form").on("submit", () =>{
             $('#form-div').css('display', 'none'); 
         });
-        
-        
-
 }
 $('#create-button').on('click', $createPeon)
 
@@ -82,12 +79,10 @@ const $repsondToPeonName = (e) => {
         job: null
         }
         peonsList.push(peonAdded)    
-    //make an li element with this ^^ value
-    // $('#peons-no-job').append($(`<li>${$peonName}</li>`));
     // // Reset the input field to an empty string
     $("#peon-name").val("") 
     updatePeons();
-    // computerTurn();
+    
 }
 
  ////////need to figure out why submit on the select button form refreshes the page
@@ -104,11 +99,9 @@ const $selectPeon = () => {
                 let peonToGetJob;
                 if($("#select-peon-name").val() === peonsList[i].name){
                     peonToGetJob = peonsList[i];
-                    console.log(peonToGetJob)
                     $('#select-form-div').css('display', 'none')
                     
                     //job option buttons pop up:
-
                     $('#give-job').css('display', 'block');
                     $('#repair').on('click', ()=>{
                         peonToGetJob.job = "repair"
@@ -125,8 +118,6 @@ const $selectPeon = () => {
                 }   
                 
             } 
-            
-              
             //this stops the page refresh after hitting submit following peon choosing
             //but it also keeps the old ul of peons to choose from .... 
             return false;
@@ -141,12 +132,12 @@ const updatePeons = () =>{
     $('.player-peons-list').empty();
     //re-add all peons with updated job status
     for (i=0; i<peonsList.length; i++){
-        if(peonsList[i].job === "repair"){
+        if(peonsList[i].job === null ){
+            $('.player-peons-list').append(`<li>${peonsList[i].name} is ready for work`)
+        }else if(peonsList[i].job === "repair"){
             $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to REPAIR the barracks`)
         }else if(peonsList[i].job === "attack"){
             $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to ATTACK the enemy`)
-        }else{
-            $('.player-peons-list').append(`<li>${peonsList[i].name} is ready for work`)
         }
     }
 }
@@ -204,7 +195,29 @@ const loseGameCheck = ()=>{
         alert(`Your hitpoints are currently at ${playerBarracks.hitpoints}. Opponent is at ${computerBarracks.hitpoints}. Let's keep going!`)
 
     }
+    computerBarracksDamage()
+    playerBarracksDamage()
     displayStatus()
+}
+const computerBarracksDamage = () =>{
+    if (computerBarracks.hitpoints < 2){
+        $('#computer-barracks').addClass('barracks0-2')
+    }else if(computerBarracks.hitpoints < 5){
+        $('#computer-barracks').addClass('barracks3-5')
+    }else if(computerBarracks.hitpoints < 10){
+        $('#computer-barracks').addClass('barracks6-9')
+    }
+        
+}
+const playerBarracksDamage = () =>{
+    if (playerBarracks.hitpoints < 2){
+        $('#player-barracks').addClass('barracks0-2')
+    }else if(computerBarracks.hitpoints < 5){
+        $('#player-barracks').addClass('barracks3-5')
+    }else if(computerBarracks.hitpoints < 10){
+        $('#player-barracks').addClass('barracks6-9')
+    }
+        
 }
 
 

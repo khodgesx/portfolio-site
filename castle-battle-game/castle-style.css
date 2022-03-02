@@ -1,7 +1,5 @@
 body {
-    /* background-image: url("https://i.imgur.com/mnAgbx7.jpg?1"); */
-    background-color: aquamarine;
-    background-image: linear-gradient(rgb(172, 236, 231), rgb(199, 219, 161));   
+    background-image: linear-gradient(rgb(155, 238, 231), rgb(190, 216, 141));   
 }
 header {
     display: flex;
@@ -227,9 +225,21 @@ label[for="create-peon-form"]{
     margin: 25px;
 }
 
-#peon-box{
-    color: rgb(247, 96, 80);
-    font-family: 'Shizuru', cursive;
-    font-size: 25px;
-
+.barracks6-9{
+    border: 5px solid rgb(51, 67, 161);
+    background-image: linear-gradient(green, rgb(141, 96, 46)); 
+    height: 300px;
+    width: 300px;
+}
+.barracks3-5{
+    border: 5px solid rgb(51, 67, 161);
+    background-image: linear-gradient(green, rgb(88, 58, 24)); 
+    height: 300px;
+    width: 300px;
+}
+.barracks0-2{
+    border: 5px solid rgb(51, 67, 161);
+    background-image: linear-gradient(rgb(45, 54, 34), rgb(88, 58, 24)); 
+    height: 300px;
+    width: 300px;
 }
