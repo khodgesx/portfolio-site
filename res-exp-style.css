@@ -267,8 +267,9 @@ a {
         margin:30px;
         background-color: #d2d4e4;
     }  
-    header {
-        border-radius: 3%;
+
+    header{
+        position:relative;
     }
     #header-div {
         height:250px;
@@ -302,6 +303,15 @@ a {
     #open-resume{
         width: 100%;
         font-size: 30px;
+    }
+    #modal-textbox{
+        height:500px;
+    }
+    #modal-textbox h5{
+        font-size: 20px;
+    }
+    #modal-textbox p{
+        font-size: 20px;
     }
     main{
         display: grid;
