@@ -41,16 +41,16 @@ createOrSelect();
 //createOrSelect is acting as start of the game right now 
 
 
-const peonsReadyToWork = () =>{
-    for(i=0; i<peonsList.length; i++){
-        if(peonsList[i].job === null){
-            $('#peons-no-job').append($(`<li>${peonsList[i].name}</li>`));
-        }else if(peonsList[i].job != null){
-            $('#peons-no-job').remove();
-        }
-    }
-}
-peonsReadyToWork();
+// const peonsReadyToWork = () =>{
+//     for(i=0; i<peonsList.length; i++){
+//         if(peonsList[i].job === null){
+//             $('#peons-no-job').append($(`<li>${peonsList[i].name}</li>`));
+//         }else if(peonsList[i].job != null){
+//             $('#peons-no-job').remove();
+//         }
+//     }
+// }
+// peonsReadyToWork();
 
 
 const $createPeon = () => {
@@ -136,21 +136,10 @@ const $selectPeon = () => {
 $('#select-button').on('click', $selectPeon)
 
 
-// const updatePeons = () => {
-//     for(i=0; i<peonsList.length; i++){
-//         if(peonsList[i].job === "repair"){
-//         $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to REPAIR the barracks`)
-//         }else{
-//         if(peonsList[i].job === "attack")
-//             $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to ATTACK the enemy`)
-           
-//         }
-//     }computerTurn();
-   
-// }
 const updatePeons = () =>{
-    //remove and refresh the list with info below
+    //remove all peons added to the ul
     $('.player-peons-list').empty();
+    //re-add all peons with updated job status
     for (i=0; i<peonsList.length; i++){
         if(peonsList[i].job === "repair"){
             $('.player-peons-list').append(`<li>${peonsList[i].name}'s job is to REPAIR the barracks`)
@@ -159,7 +148,7 @@ const updatePeons = () =>{
         }else{
             $('.player-peons-list').append(`<li>${peonsList[i].name} is ready for work`)
         }
-    }computerTurn();
+    }
 }
 
 
@@ -199,6 +188,7 @@ const computerTurn = ()=>{
     loseGameCheck();
     
 }
+$('#computer-button').on('click', computerTurn)
 
 const loseGameCheck = ()=>{
     if (computerBarracks.hitpoints < 0){
