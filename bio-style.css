@@ -110,10 +110,15 @@ a {
     padding:10px;
     margin: 0;
 }
+#pre-first-div {
+    height: max-content;
+    width: 100%;
+    background: rgb(157, 241, 213);
+}
 #first-div {
     height: max-content;
     width: 100%;
-    background: rgb(226, 223, 217);
+    background: rgb(243, 223, 183);
 }
 
 
@@ -126,7 +131,7 @@ a {
 #third-div {
     height: max-content;
     width: 100%;
-    background-color: rgb(66, 167, 235);
+    background-color: rgb(105, 182, 233);
 }
 #fourth-div {
     height: max-content;
@@ -150,30 +155,50 @@ a {
     padding-top:0;
     text-align: center;
 }
-#fun{
-    font-family: Monoton, cursive;
-    font-size: 20px;
-    letter-spacing: 2px;
-}
+
 #sixth-div {
     height: max-content;
     width: 100%;
     background-color: rgb(219, 238, 241);
     font-size: 15px;;
 }
-h5{
-    text-align: right;
+
+.accordion-browser{
+    display:none;
 }
-#get-quote{
-    background-color: rgb(228, 228, 147);
-    color:rgb(14, 14, 177);
-    font-family: Shizuru, sans-serif;
-    padding: 5px 10px;
-    margin: 5px;
-    border: 1px dotted blue;
+.accordion{
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    border: 2px solid orange;
+    padding:15px;
+    margin: 15px 0;
+}
+.accordion-content{
+    border:2px dotted green;
+    height:max-content;
+    width: 100%;
+    display:none;
 }
 
-
+#pizzas h1{
+    text-align: center;
+    color: rgb(1, 88, 1);
+}
+#pizza-title{
+    font-family: Monoton, cursive;
+    letter-spacing: 2px;
+    border: 2px solid orange;
+}
+.accordion img{
+    margin-left: 30%;
+    margin-top: 5px;
+    border: 3px solid green;
+}
+.accordion-content p{
+    font-family: 'Dosis', sans-serif;
+    padding:5px;
+}
 
 #footer-nav ul {
     display: flex;
@@ -235,30 +260,28 @@ h5{
     #top-nav {
         background-color:rgb(255, 208, 0);
         height: max-content;
-        width:250px;
-        margin: 0 15px 0 0;
+        width:100%;
+        margin: 0 15px 15px 0;
     
     }
     #circle-nav{
-        display: grid;
-        grid-template-rows: 1fr;
-        justify-content: space-around;
+        display: flex;
+        justify-content: space-evenly;
         grid-gap:10px;
         height: 100%;
         
     }
     #circle-nav button{
-        height: 175px;
-        width: 175px;
+        height: 125px;
+        width: 125px;
         border-radius: 50%;
         border: 5px dotted #c54e4e;
         margin:5px;
-        font-size:10px;
         background-color: rgb(255, 208, 0);
     }
     main{
         display: grid;
-        grid-template-columns: 1fr 6fr;
+        grid-template-rows: auto;
         padding:15px;
         width:95%;
         justify-items: center;
@@ -279,7 +302,7 @@ h5{
  
 
     .div-border p{
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
         align-items: center;
         padding: 10px;
@@ -306,7 +329,14 @@ h5{
         padding: 15px;
     }
    
-    
+    #pizzas{
+        width: 100%;
+    }
+    #pizzas img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     #footer-nav ul {
         display: flex;
@@ -331,7 +361,7 @@ h5{
     .circle a {
         font-weight: bolder;
         font-family: 'Dosis', sans-serif;
-        font-size: 30px;
+        font-size: 20px;
         color:black;
     }
     .rotate {
@@ -339,7 +369,7 @@ h5{
         transition-property: transform;
     
         }
-     /* change rotation specs  */
+    
     .rotate:hover { 
     transform: rotate(360deg);
     }

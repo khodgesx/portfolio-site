@@ -21,7 +21,6 @@ h1{
     text-align: center;
 }
 
-/* add hover effect to each letter, change color with hover */
 h2{
     font-family: 'Monoton', cursive;
     text-align: center;
@@ -44,8 +43,9 @@ header {
 
 
 #button-photo{
-    display: flex;
-    width: max;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
 
 }
 #hello{
@@ -81,7 +81,7 @@ header {
     transition: width ease 0.3s;
 }
 
- .to-circle {
+.to-circle {
     width: 100px;
     z-index: 2;
 }
@@ -160,50 +160,14 @@ a {
     width: 100%;
     background: rgb(226, 223, 217);
 }
-#ga{
-    text-decoration: underline;
-}
+
 
 #right-div {
     height: max-content;
     width: 100%;
     background-color: salmon;
 }
-.accordion-browser{
-    display:none;
-}
-.accordion{
-    display: grid;
-    grid-template-rows: 1fr;
-    justify-content: center;
-    border: 2px solid orange;
-    padding:15px;
-    margin: 15px 0;
-}
-.accordion-content{
-    border:2px dotted green;
-    height:max-content;
-    width: 100%;
-    display:none;
-}
-#pizzas h1{
-    text-align: center;
-    color: rgb(1, 88, 1);
-}
-#pizza-title{
-    font-family: Monoton, cursive;
-    letter-spacing: 2px;
-    border: 2px solid orange;
-}
-.accordion img{
-    margin-left: 30%;
-    margin-top: 5px;
-    border: 3px solid green;
-}
-.accordion-content p{
-    font-family: 'Dosis', sans-serif;
-    padding:5px;
-}
+
 #kelly {
     height: 100px;
     width:75px;
@@ -243,7 +207,7 @@ a {
     transition-duration: 0.8s;
     transition-property: transform;
 
-  }
+}
 
 .rotate:hover {
     transform: rotate(360deg);
@@ -282,34 +246,8 @@ a {
     #right-div {
         height: max;
        
-    }
-    #pizzas{
-        width: 100%;
-    }
-    .accordion{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-content: center;
-        border: 2px solid orange;
-        padding:15px;
-        margin: 15px 0;
-        width: 100%;
-    }
-    .accordion-content{
-        border:1px solid green;
-        height:max-content;
-        width: 100%;
-        display:none;
-    }
-    #pizzas h1{
-        text-align: center;
-    }
-    #pizza-title{
-        font-family: Monoton, cursive;
-        letter-spacing: 2px;
-    }
   
-    
+    }    
 }
 
 
@@ -372,30 +310,25 @@ a {
     #top-nav {
         background-color:rgb(255, 208, 0);
         height:max-content;
-        width:250px;
+        width: 100%;
         margin: 0 15px 0 15px;
-    
     }
     #circle-nav{
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        justify-content: space-around;
-        grid-gap:20px;
-        height: 100%;
-        
+        display: flex;
+        justify-content: space-around;   
     }
     #circle-nav button{
-        height: 175px;
-        width: 175px;
+        height: 125px;
+        width: 125px;
         border-radius: 50%;
         border: 5px dotted #c54e4e;
         margin:5px;
-        font-size:10px;
+        font-size:8px;
         background-color: rgb(255, 208, 0);
     }
     main{
         display: grid;
-        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 1fr 2fr;
         padding:15px;
         width:95%;
         justify-items: center;
@@ -451,39 +384,6 @@ a {
         color:black;
     }
 
-    #pizzas{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        display: grid;
-        grid-template-rows: 1fr 2fr;
-    }
-    #pizza-title{
-        height:max-content;
-    }
-    .accordion{
-        display: none;
-    }
-    .accordion-browser{
-        display: grid;
-
-    }
-    .b-accordion-content{
-        display: none;
-    }
-
-    .b-accordion-content img{
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5px;
-        border: 3px solid green;
-    }
-    .b-accordion-content p{
-        font-family: 'Dosis', sans-serif;
-        font-size: 20px;
-        padding:50px;
-        text-align: center;
-    }
     
     #bottom-image-box {
         height:100%;
@@ -535,7 +435,7 @@ a {
     .circle a {
         font-weight: bolder;
         font-family: 'Dosis', sans-serif;
-        font-size: 30px;
+        font-size: 20px;
         color:black;
     }
     .rotate {
