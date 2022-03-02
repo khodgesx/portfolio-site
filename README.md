@@ -18,8 +18,20 @@ I used some CSS hover effects to change the color of my name (browswer version o
 on the mobile version. 
 
 jQuery:
-I used jQuery to change the size of my hello button to reveal a photo underneath. 
+I used jQuery to...
 
-I also used jQuery to make a menu hamburger - a hidden menu is shown when the hamburger is clicked. 
+-change the size of my hello button to reveal a photo underneath. 
 
-I also used jQuery to create a modal that shows my resume for a quick view of it if someone doesn't want to download my resume. 
+-to make a menu hamburger - a hidden menu is shown when the hamburger is clicked. 
+
+-to create a modal that shows my resume for a quick view of it if someone doesn't want to download my resume. 
+
+-to create an accordion that reveals picture and recipe info of pizzas I've made when you click on each one. 
+
+unsolved problems:
+-I tried to add an api call to retrieve a random quote but couldn't get it to work. I got help from two TAs who also couldn't get it to work. I tried setting up a different api call for random photos of dogs and that didn't work either. Trying again but not optimistic. 
+
+-trying to get my choose your adventure game done - need to figure out the different scenarios and how it will play out and eventually ened. 
+
+-castle battle. I just can't get the right sequence of things to happen and I think the code is not so DRY in some places. 
+
