@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Press+Start+2P&display=swap');
 * {
     padding: 0;
 }
@@ -144,28 +145,11 @@ a {
     height:35%;
     padding-top: 10px;
 }
-.main-divs {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 10px;
-    font-family: 'Dosis', sans-serif;
-}
-
-.main-divs p{
-    padding:10px;
-    margin: 0;
-}
-#left-div {
-    height: max-content;
+#empty-div{
+    height: 15px;
     width: 100%;
-    background: rgb(226, 223, 217);
-}
-
-
-#right-div {
-    height: max-content;
-    width: 100%;
-    background-color: salmon;
+    background: rgb(9, 54, 12);
+    margin: 15px 0 15px 0;
 }
 
 #kelly {
@@ -176,9 +160,14 @@ a {
     padding:5px;
 }
 #bottom-image-box{
-    background:linear-gradient(50deg, salmon, yellow);
-    margin:15px 3px 0 3px;
-    border:10px solid rgb(82, 56, 60);
+    background:linear-gradient(50deg, salmon, rgb(245, 223, 127));
+}
+#bottom-image-box p{
+    color:rgb(9, 54, 12);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.5;
+    padding:5px;
+    
 }
 #footer-nav ul {
     display: flex;
@@ -213,7 +202,7 @@ a {
     transform: rotate(360deg);
 }
 
-/* //need to fix the divs -- <p> stuff creeping out  */
+
 @media screen and (min-width:480px) {
     header {
         border-radius: 3%;
@@ -223,7 +212,7 @@ a {
         grid-template-rows: 1fr 1fr;
     }
     .pill{
-        width:100%;
+        width:95%;
         height: 100px;
         border-radius: 50px;
         border: 5px dotted #c54e4e;
@@ -236,18 +225,7 @@ a {
     .to-circle {
         width: 100px;
         z-index: 2;
-    }
-
-    #left-div {
-        height: max;
-        
-    }
-    
-    #right-div {
-        height: max;
-       
-  
-    }    
+    }   
 }
 
 
@@ -256,7 +234,7 @@ a {
 @media screen and (min-width:800px) {
     body{
         margin:30px;
-        background-color: #d2d4e4;
+        background-color: linear-gradient(#d2d4e4, black);
     }  
     header {
         border-radius: 3%;
@@ -323,12 +301,11 @@ a {
         border-radius: 50%;
         border: 5px dotted #c54e4e;
         margin:5px;
-        font-size:8px;
         background-color: rgb(255, 208, 0);
     }
     main{
         display: grid;
-        grid-template-rows: 1fr 2fr;
+        grid-template-rows: auto;
         padding:15px;
         width:95%;
         justify-items: center;
@@ -336,42 +313,7 @@ a {
         margin:10px;
         
     }
-    .main-divs {
-        display: flex;
-        font-family: 'Dosis', sans-serif;
-        justify-content: space-evenly;
-    }
-    
-    .main-divs p{
-        padding:10px;
-    }
- 
-
-    .div-border p{
-        font-size: 22px;
-        text-align: center;
-        align-items: center;
-        padding-top: 50px;
-
-    }
-    #left-div {
-        height: 100%;
-        background: rgb(226, 223, 217);
-        height:100%;
-        
-    }
-    
-    #right-div {
-        height: 100%;
-        width: 100%;
-        background-color: salmon;
-        overflow: auto;
-    }
-  
-    
-    .div-border{
-        margin-bottom:0;
-    }
+   
 
     .menu {
         display: none;
@@ -386,9 +328,8 @@ a {
 
     
     #bottom-image-box {
-        height:100%;
-        margin-top:20px;
-        margin-bottom: 15%;
+        height: 100%;
+        width: 100%;
     }
     #kelly {
         height: 350px;
@@ -402,7 +343,6 @@ a {
     .links{
         font-family: 'Dosis', sans-serif;
         color:black;
-        padding: 15px;
     }
     
     a {
