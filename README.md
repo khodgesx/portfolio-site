@@ -28,6 +28,8 @@ I used jQuery to...
 
 -to create an accordion that reveals picture and recipe info of pizzas I've made when you click on each one. 
 
+-to create a carousel for images of my dog, linked to it on my project site.
+
 unsolved problems:
 -I tried to add an api call to retrieve a random quote but couldn't get it to work. I got help from two TAs who also couldn't get it to work. I tried setting up a different api call for random photos of dogs and that didn't work either. Trying again but not optimistic. 
 
