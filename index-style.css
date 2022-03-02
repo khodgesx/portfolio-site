@@ -248,7 +248,18 @@ a {
     .to-circle {
         width: 100px;
         z-index: 2;
-    }      
+    }     
+    .show-photo{
+        display: flex;
+        border-radius: 50%;
+        height: 75px;
+        width: 75px;
+        align-self: center;
+        border:dotted 3px rgb(255, 208, 0);
+        position: absolute;
+        top:3%;
+        right:25%;
+    } 
     #quote{
         font-size: 20px;
     }
@@ -263,10 +274,12 @@ a {
         background-color: linear-gradient(#d2d4e4, black);
     }  
     header {
+        background: linear-gradient(135deg, rgb(238, 203, 139), rgb(228, 207, 105),rgb(218, 182, 172));
         border-radius: 3%;
         height: auto;
         width: auto;
     }
+   
     #header-div {
         height:max-content;
     }
@@ -287,12 +300,12 @@ a {
         width:200px;
         border:dotted 3px rgb(255, 208, 0);
         position: absolute;
-        top:15%;
-        right: 20%;
+        top:8%;
+        right: 8%;
     }
     
     .pill{
-        width:100%;
+        width:70%;
         height: 250px;
         border-radius: 120px;
         border: 5px dotted #c54e4e;
@@ -424,6 +437,18 @@ a {
     }
     
 }
-
+@media screen and (min-width:1024px) {
+    .show-photo{
+        display: flex;
+        border-radius: 50%;
+        align-self: center;
+        height: 200px;
+        width:200px;
+        border:dotted 3px rgb(255, 208, 0);
+        position: absolute;
+        top:15%;
+        right: 20%;
+    }
+}
 
 
